@@ -1,0 +1,53 @@
+@import '../_base/variables'; 
+@import '../_functions/baseFunctions'; 
+
+.header,
+.viewPort{
+	display:block;
+	float:left;
+	width:100%;
+}
+.viewPort{
+	@include transition(margin-top 0.5s);
+}
+body{
+	display:block;
+	float:left; 
+}
+.header{
+	position:fixed;
+	top:-100px;
+	left:0;
+	@include transition(0.5s);
+	z-index:99999;
+	.homeHeader{
+		background:#F0F8FB;
+		margin-top:0;
+		box-shadow:5px 0 5px rgba(0,0,0,0.5);
+		height:70px;
+		padding-top:20px;
+		.hh_icon{
+			height:50px;
+		}
+		.hh_btn{
+			color:#888;
+		}
+		.hh_btn_sign{
+			color:#888;
+			background:rgba(0,0,0,0.1);
+		}
+		.hh_btn_sign:hover{
+			color:#555;
+			background:rgba(0,0,0,0.15);
+		} 
+	}
+}
+.headerActive{
+	top:0px;
+}
+.headerActiveView{
+	margin-top:90px;
+}
+.headerHome{
+	margin-top:0;
+}

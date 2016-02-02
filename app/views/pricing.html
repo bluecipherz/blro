@@ -1,0 +1,29 @@
+<div class="mainPage">
+	<div class="folioPage">
+		<div class="boxx">
+
+			<div class="f_fbox" ng-repeat="data in pricing.pageData">
+				<div class="ffb_head"> {{data.name}} <div class="ffbh_p">Rs. {{data.price}}</div></div>
+				<div class="ffb_desc">{{data.description}}</div>
+				<div class="ffb_arrow" ng-class="{'arrowDeact':!data.leftArrow}">
+					<div class="ffb_ar"ng-click="pricing.arrow(0,$index)">
+						<div class="ffba_left"></div>
+					</div>
+				</div>
+				<div class="ffb_cont">
+					<div class="ffbc_imgOuter ffbcio{{$index}}">
+						<div class="ffbc_img ffbci{{$index}}" ng-repeat="img in data.img">
+							<img src="{{img.link}}" draggable="false"> 
+						</div>
+					</div>
+				</div> 
+				<div class="ffb_arrow"ng-class="{'arrowDeact':!data.rightArrow}">
+					<div class="ffb_ar" ng-click="pricing.arrow(1,$index)">
+						<div class="ffba_right"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
